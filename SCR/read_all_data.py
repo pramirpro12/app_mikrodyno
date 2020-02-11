@@ -7,7 +7,7 @@ import matplotlib.backends.backend_pdf
 ####################################################################
 
 # read from excel into a pandas dataframe
-ss = read_excel("DMSP_dosage.xlsx", "substrate_forpy")
+ss = read_excel("../Data/DMSP_dosage.xlsx", "substrate_forpy")
 
 # times
 dtimes = array(ss['T'])
