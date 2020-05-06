@@ -1,4 +1,3 @@
-from __future__ import print_function
 from scipy.integrate import *
 from numpy import *
 from pylab import *
@@ -371,18 +370,18 @@ class all_mods:
 			else:
 				self.set_traits(params_old)
 			if (it % pits == 0):
-				print((it,chi,ar/pits))
+				print (it,chi,ar/pits)
 				ars = append(ars,ar/pits)
 				ar = 0.0
 		pms = r_[[ mean(exp(p)) for p in pall]]
 		pss = r_[[ std(exp(p)) for p in pall]]
 		print ('Optimal parameters')
 		for (p,l) in zip(pms,self.pnames):
-			print((l,'=',p))
+			print (l,'=',p)
 		print (' ')
 		print ('Standard deviations')
 		for (s,l) in zip(pss,self.pnames):
-			print((l+'std','=',s))
+			print (l+'std','=',s)
 		print (' ')
 		#self.set_traits(log(pms))
 		self.pall = pall
